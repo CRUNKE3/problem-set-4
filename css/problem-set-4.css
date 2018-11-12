@@ -51,3 +51,7 @@ button:hover {
 .fail {
   background-color: #EF9A9A;
 }
+
+#exer1 {
+  font: 1.1em "Century Gothic", sans-serif;
+}
