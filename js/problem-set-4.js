@@ -4,7 +4,7 @@
 
 function hello() {
 
-var div = document.getElementById("output1")
+var div = document.getElementById("output1");
 div.innerHTML="Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
@@ -24,8 +24,9 @@ function helloAgain() {
 
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
-
-  // WRITE YOUR EXERCISE 2 CODE HERE
+name = prompt("Enter Your Name:");
+var div = document.getElementById("output2");
+div.innerHTML="Hello, " + name + "!"
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -44,8 +45,9 @@ function celsius() {
 
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-
-  // WRITE YOUR EXERCISE 3 CODE HERE
+var fahren = ((cels * 1.8) + 32).toFixed(2);
+var div = document.getElementById("output3");
+div.innerHTML= cels + " degrees Celsius equals " + fahren + " degrees Fahrenheit."
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -65,7 +67,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+var celsi = ((fahr - 32) * (5/9)).toFixed(2);
+var div = document.getElementById("output4");
+div.innerHTML= fahr +" degrees Fahrenheit equals " + celsi + " degrees Celsius."
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
