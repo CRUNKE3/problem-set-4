@@ -236,7 +236,7 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
+
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
