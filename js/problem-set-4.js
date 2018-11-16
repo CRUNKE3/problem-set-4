@@ -206,7 +206,13 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-
+  var dollars = Math.floor(input/100);
+  var quarters = Math.floor((input%100)/25);
+  var dimes = Math.floor(((input%100)%25)/10);
+  var nickels = Math.floor((((input%100)%25)%10)/5);
+  pennies = Math.floor((((input%100)%25)%10)%5);
+  var div = document.getElementById("output9");
+  div.innerHTML = `Dollars: ${dollars}<br>Quarters: ${quarters}<br>Dimes: ${dimes}<br>Nickels: ${nickels}<br>Pennies: ${pennies}`
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
