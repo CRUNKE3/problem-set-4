@@ -120,11 +120,11 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  centimeters = Math.floor((input%63360)%12);
-  var meters = Math.floor((input%63360)/36);
-  var kilometers = Math.floor(input/63360);
+  centimeters = Math.floor((input%100000)%100);
+  var meters = Math.floor((input%100000)/100);
+  var kilometers = Math.floor(input/100000);
   var div = document.getElementById("output6");
-  div.innerHTML = `Miles: ${miles}<br>Yards: ${yards}<br>Feet: ${feet}<br>Inches: ${inches}`
+  div.innerHTML = `Kilometers: ${kilometers}<br>Meters: ${meters}<br>Centimeters: ${centimeters}`
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -148,7 +148,13 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
+fluidOunces = Math.floor((((input%128)%32)%16)%8);
+var gallons = Math.floor(input/128);
+var quarts = Math.floor((input%128)/32);
+var pints = Math.floor(((input%128)%32)/16);
+var cups = Math.floor((((input%128)%32)%16)/8);
+var div = document.getElementById("output7");
+div.innerHTML = `Gallons: ${gallons}<br>Quarts: ${quarts}<br>Pints: ${pints}<br>Cups: ${cups}<br>Fluid Ounces: ${fluidOunces}`
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -172,7 +178,11 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+var tons = Math.floor(input/32000);
+var pounds = Math.floor((input%32000)/16);
+ounces = Math.floor((input%32000)%16);
+var div = document.getElementById("output8");
+div.innerHTML = `Tons: ${tons}<br>Pounds: ${pounds}<br>Ounces: ${ounces}`
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -196,7 +206,7 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
