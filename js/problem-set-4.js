@@ -45,8 +45,8 @@ function celsius() {
 
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-var fahren = ((cels * 1.8) + 32).toFixed(2);
-var div = document.getElementById("output3");
+let fahren = ((cels * 1.8) + 32).toFixed(2);
+let div = document.getElementById("output3");
 div.innerHTML= cels + " degrees Celsius equals " + fahren + " degrees Fahrenheit."
 
   ////////////////////////// DO NOT MODIFY
@@ -67,7 +67,7 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-var celsi = ((fahr - 32) * (5/9)).toFixed(2);
+let celsi = ((fahr - 32) * (5/9)).toFixed(2);
 var div = document.getElementById("output4");
 div.innerHTML= fahr +" degrees Fahrenheit equals " + celsi + " degrees Celsius."
 
@@ -93,9 +93,9 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 inches = Math.floor((input%63360)%12);
-var feet = Math.floor(((input%63360)%36)/12);
-var yards = Math.floor((input%63360)/36);
-var miles = Math.floor(input/63360);
+let feet = Math.floor(((input%63360)%36)/12);
+let yards = Math.floor((input%63360)/36);
+let miles = Math.floor(input/63360);
 var div = document.getElementById("output5");
 div.innerHTML = `Miles: ${miles}<br>Yards: ${yards}<br>Feet: ${feet}<br>Inches: ${inches}`
   ////////////////////////// DO NOT MODIFY
@@ -121,8 +121,8 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   centimeters = Math.floor((input%100000)%100);
-  var meters = Math.floor((input%100000)/100);
-  var kilometers = Math.floor(input/100000);
+  let meters = Math.floor((input%100000)/100);
+  let kilometers = Math.floor(input/100000);
   var div = document.getElementById("output6");
   div.innerHTML = `Kilometers: ${kilometers}<br>Meters: ${meters}<br>Centimeters: ${centimeters}`
 
@@ -149,11 +149,11 @@ function fluidOunces() {
   /////////////////////////// DO NOT MODIFY
 
 fluidOunces = Math.floor((((input%128)%32)%16)%8);
-var gallons = Math.floor(input/128);
-var quarts = Math.floor((input%128)/32);
-var pints = Math.floor(((input%128)%32)/16);
-var cups = Math.floor((((input%128)%32)%16)/8);
-var div = document.getElementById("output7");
+let gallons = Math.floor(input/128);
+let quarts = Math.floor((input%128)/32);
+let pints = Math.floor(((input%128)%32)/16);
+let cups = Math.floor((((input%128)%32)%16)/8);
+let div = document.getElementById("output7");
 div.innerHTML = `Gallons: ${gallons}<br>Quarts: ${quarts}<br>Pints: ${pints}<br>Cups: ${cups}<br>Fluid Ounces: ${fluidOunces}`
 
   /////////////////////////////// DO NOT MODIFY
@@ -236,12 +236,12 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  var quarter = Math.floor(input/25);
-  var dime = Math.floor((input%25)/10);
-  var nickel = Math.floor(((input%25)%10)/5);
-  var penny = Math.floor((((input%25)%10)%5)/1);
-  var div = document.getElementById("output10");
-  div.innerHTML = `${quarter} coins`
+let quarter = (amount/0.25);
+let dime = ((amount%0.25)/0.10);
+let nickel = (((amount%0.25)%0.10)/0.05);
+let penny = ((((amount%0.25)%0.10)%0.05)/0.01);
+var div = document.getElementById("output10");
+div.innerHTML = Math.floor(quarter + dime + nickel + penny)"coins."
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
