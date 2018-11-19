@@ -236,8 +236,13 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-
-
+let quarter = Math.floor(amount/25);
+let dime = Math.floor((amount%25)/10);
+let nickel = Math.floor(((amount%25)%10)/5);
+let penny = Math.floor((((amount%25)%10)%5)/1);
+var div = document.getElementById("output10");
+div.innerHTML = "`"
+  
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
