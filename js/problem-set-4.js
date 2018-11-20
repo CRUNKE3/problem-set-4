@@ -236,16 +236,15 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-let quarter = (amount/0.25);
-let dime = ((amount%0.25)/0.10);
-let nickel = (((amount%0.25)%0.10)/0.05);
-let penny = ((((amount%0.25)%0.10)%0.05)/0.01);
+let quarter = Math.floor(amount/0.25);
+let dime = Math.floor((amount%0.25)/0.10);
+let nickel = Math.floor(((amount%0.25)%0.10)/0.05);
+let penny = Math.round((((amount%0.25)%0.10)%0.05)/0.01);
 var div = document.getElementById("output10");
-let coins = Math.floor(quarter + dime + nickel + penny);
-if (coins = 1) {
+let coins = quarter + dime + nickel + penny;
+if (coins == 1) {
   div.innerHTML = `${coins} coin.`
-}
-else {
+} else {
   div.innerHTML = `${coins} coins.`
 }
   
