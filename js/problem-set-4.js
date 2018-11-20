@@ -241,8 +241,14 @@ let dime = ((amount%0.25)/0.10);
 let nickel = (((amount%0.25)%0.10)/0.05);
 let penny = ((((amount%0.25)%0.10)%0.05)/0.01);
 var div = document.getElementById("output10");
-div.innerHTML = Math.floor(quarter + dime + nickel + penny)"coins."
-
+let coins = Math.floor(quarter + dime + nickel + penny);
+if (coins = 1) {
+  div.innerHTML = `${coins} coin.`
+}
+else {
+  div.innerHTML = `${coins} coins.`
+}
+  
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
